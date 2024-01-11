@@ -24,6 +24,7 @@ const embloy = new EmbloyClient('your-client-token', {
 embloy.makeRequest()
   .then(result => console.log(result))
   .catch(error => console.error(error.message));
+```
 
 ## Publish Package
 ```Bash
