@@ -13,8 +13,7 @@ npm install embloy
 Integrate it in your service:
 
 ```javascript
-// Replace 'YOUR_CLIENT_TOKEN' with your actual client token
-
+// In your application or script
 const embloy = new EmbloyClient('your-client-token', {
   mode: "job",
   job_slug: "your-job-slug",
