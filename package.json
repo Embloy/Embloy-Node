@@ -1,0 +1,26 @@
+{
+  "name": "embloy",
+  "version": "0.1.1",
+  "description": "Embloy's Ruby SDK for interacting with your Embloy integration.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Embloy/Embloy-Node.git"
+  },
+  "keywords": [
+    "Node",
+    "SDK"
+  ],
+  "author": "Carlo Bortolan",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Embloy/Embloy-Node/issues"
+  },
+  "dependencies": {
+    "axios": "^1.6.5"
+  },
+  "homepage": "https://developer.embloy.com"
+}
