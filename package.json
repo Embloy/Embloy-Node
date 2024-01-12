@@ -1,6 +1,6 @@
 {
   "name": "embloy",
-  "version": "0.1.1",
+  "version": "0.1.1-beta.1",
   "description": "Embloy's Ruby SDK for interacting with your Embloy integration.",
   "main": "index.js",
   "scripts": {
