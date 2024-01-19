@@ -14,19 +14,21 @@ Integrate it in your service:
 
 ```javascript
 // In your application or script
-const embloy = new EmbloyClient('your-client-token', {
+const embloy = new EmbloyClient("your-client-token", {
   mode: "job",
   job_slug: "your-job-slug",
   success_url: "your-success-url",
   cancel_url: "your-cancel-url",
 });
 
-embloy.makeRequest()
-  .then(result => console.log(result))
-  .catch(error => console.error(error.message));
+embloy
+  .makeRequest()
+  .then((result) => console.log(result))
+  .catch((error) => console.error(error.message));
 ```
 
 ## Publish Package
+
 ```Bash
 npm publish
 ```
