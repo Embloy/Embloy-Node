@@ -14,17 +14,17 @@ Integrate it in your service:
 
 ```javascript
 // In your application or script
-const embloy = new EmbloyClient("your-client-token", {
-  mode: "job",
-  job_slug: "your-job-slug",
-  success_url: "your-success-url",
-  cancel_url: "your-cancel-url",
-});
+import { EmbloyClient, EmbloySession } from 'embloy';
 
-embloy
-  .makeRequest()
-  .then((result) => console.log(result))
-  .catch((error) => console.error(error.message));
+const session = new EmbloySession({
+  mode: "job",
+  job_slug: "job#1",
+}); // Other fields are optional
+const embloy = new EmbloyClient(clientToken, session);
+
+embloy.makeRequest()
+  .then(result => window.location.href = url)
+  .catch(error => console.error(error.message));
 ```
 
 ## Publish Package
