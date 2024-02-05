@@ -1,5 +1,4 @@
 import axios from 'axios';
-import FormData from 'form-data';
 
 interface SessionOptions {
   success_url?: string;
@@ -36,30 +35,18 @@ class EmbloyClient {
   }
 
   private getFormDataAndHeaders(): { data: any, headers: any } {
-    let data;
-    let headers = { 
-      'client_token': this.clientToken,
-      // Add other necessary headers here
+    let data = {
+      mode: this.session.mode,
+      job_slug: this.session.job_slug,
+      success_url: this.session.success_url,
+      cancel_url: this.session.cancel_url,
     };
   
-    if (typeof window === 'undefined') {
-      // Node.js environment
-      const FormData = require('form-data');
-      data = new FormData();
-      headers = { ...headers, ...data.getHeaders() };
-    } else {
-      // Browser environment
-      data = new FormData();
-    }
-  
-    data.append('mode', this.session.mode);
-    data.append('job_slug', this.session.job_slug);
-    if (this.session.success_url) {
-      data.append('success_url', this.session.success_url);
-    }
-    if (this.session.cancel_url) {
-      data.append('cancel_url', this.session.cancel_url);
-    }
+    let headers = { 
+      'client_token': this.clientToken,
+      'User-Agent': 'embloy/0.1.2-beta.20 (Node.js; Server)',
+      'Content-Type': 'application/json',
+    };
   
     return { data, headers };
   }

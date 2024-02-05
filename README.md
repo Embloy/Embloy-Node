@@ -4,6 +4,8 @@ Embloy's Node SDK for interacting with your Embloy integration.
 
 ## Usage
 
+> _**NOTE**: For more details, see the [developers documentation](https://developers.embloy.com/docs/sdks/overview) at [developers.embloy.com](https://developers.embloy.com)._
+
 Install Embloy-Node SDK:
 
 ```Bash
@@ -12,18 +14,19 @@ npm install embloy
 
 Integrate it in your service:
 
-```javascript
-// In your application or script
+```Typescript title="your-example-service.ts"
 import { EmbloyClient, EmbloySession } from 'embloy';
 
 const session = new EmbloySession({
   mode: "job",
-  job_slug: "job#1",
-}); // Other fields are optional
-const embloy = new EmbloyClient(clientToken, session);
+  job_slug: "your-job-slug",
+  success_url: "your-success-url",
+  cancel_url: "your-cancel-url",
+});
+const embloy = new EmbloyClient("your-client-token", session);
 
 embloy.makeRequest()
-  .then(result => window.location.href = url)
+  .then(result => window.location.href = result)
   .catch(error => console.error(error.message));
 ```
 
