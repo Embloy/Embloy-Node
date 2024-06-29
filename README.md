@@ -1,4 +1,4 @@
-# Embloy Node
+# [Embloy-Node](https://www.npmjs.com/package/embloy) &middot; [![GitHub license](https://img.shields.io/badge/license-AGPL3.0-blue.svg)](https://github.com/Embloy/Embloy-Node/blob/main/LICENSE) [![npm version](https://img.shields.io/npm/v/embloy.svg?style=flat)](https://www.npmjs.com/package/embloy-node) [![Issues](https://img.shields.io/github/issues/Embloy/Embloy-Node)](https://github.com/Embloy/Embloy-Node/issues) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Embloy/Embloy-Node/pulls)
 
 Embloy's Node SDK for interacting with your Embloy integration.
 
